@@ -1,0 +1,271 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../images/banner.jpg) no-repeat center 0px fixed;
+    background-size: cover;
+    font-family: 'Open Sans';
+    color: #fff;
+}
+h1{
+    text-align: center;
+    font-weight: 100;
+}
+.wrapper{
+    background: url(../images/1.jpg)no-repeat center 0px;
+    width: 35%;
+    background-size: cover;
+    margin: 40px auto;
+}
+.formBox{
+    clear: both;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+.formTab{
+    width: 100%;
+}
+.formTab .loginList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.formTab .loginItem{
+    font-size: 20px;
+}
+/*span增加下划线*/
+.bottomColor{
+    border-bottom: 3px solid transparent;
+    border-bottom-color: #fff;
+    padding: 0 3px 0.4em;
+}
+.loginItem span{
+    cursor: pointer;
+}
+/*span取消下划线*/
+.clearBottom{
+    border-bottom-color: transparent;
+    padding: 0 3px 0.4em;
+}
+.clear{
+    clear: both;
+}
+/*表单*/
+.loginForm p{
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+.loginForm .check1{
+    position: relative;
+    display: block;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 18px 0;
+}
+
+/*登录按钮*/
+input[type="submit"]{
+    width: 100%;
+    font-size: 6px;
+    background: #1c4eda;
+    border: 3px solid #1c4eda;
+    border-radius: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 6px 10px;
+    border-width: 2px;
+    border-style: outset;
+    border-image: initial;
+    position: relative;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 12px 0;
+}
+/*登录名及密码框*/
+.footTop input[type="text"],input[type="password"],input[type="email"]{
+    outline: none;
+    color: #000;
+    border: 0;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 3px;
+    font-size: 17px;
+    width: 89.5%;
+    padding: 6px 14px;
+}
+.footBottom{
+    border-top: 1px dotted rgb(188, 188, 223);
+    margin-top: 20px;
+}
+.footBottom p{
+    text-align: center;
+}
+.footBottom p a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+@media (max-width: 375px) {
+    .main{
+        margin: 0;
+    }
+    h1{
+        font-weight: lighter;
+        font-size: 25px;
+        text-align: center;
+    }
+    .wrapper{
+        width: 90%;
+        /*background: url("../img/1.jpg")no-repeat center 0px;*/
+        background-size: cover;
+        height: 414px;
+        margin: 28px auto;
+    }
+    .formBox{
+        height: 365px;
+        padding: 24px;
+        background-color: rgba(0,0,0,0.55);
+    }
+    .formTab{
+        width: 100%;
+    }
+    .formTab .loginList{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .formTab .loginItem{
+        font-size: 20px;
+    }
+    .clear{
+        clear: both;
+    }
+    /*表单*/
+    .loginForm p{
+        font-size: 15px;
+        margin-bottom: 9px;
+    }
+    /*登录按钮*/
+    input[type="submit"]{
+        width: 100%;
+        font-size: 6px;
+        background: #1c4eda;
+        border: 3px solid #1c4eda;
+        border-radius: 3px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 10px 6px 10px;
+        border-width: 2px;
+        border-style: outset;
+        border-image: initial;
+        position: relative;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        margin: 22px 0;
+    }
+    /*登录名及密码框*/
+    .footTop input[type="text"],input[type="password"],input[type="email"]{
+        outline: none;
+        color: #000;
+        border: 0;
+        background: rgba(255, 255, 255, 0.67);
+        border-radius: 3px;
+        width: 89.5%;
+        font-family: "微軟正黑體";
+        padding: 6px 14px;
+    }
+    .footBottom{
+        border-top: 1px dotted rgb(188, 188, 223);
+        margin-top: 20px;
+    }
+    .footBottom p{
+        text-align: center;
+    }
+    .footBottom p a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+    }
+    .wrapper_new{
+        height: 450px;
+    }
+    .form_new{
+        height: 403px;
+    }
+    .error{
+        position: absolute;
+        border: 1px solid #f0f0f0;
+        border-radius: 5px;
+        padding: 15px 10px;
+        background-color: white;
+        font-size: 14px;
+        color: #282828;
+        box-shadow: 0 0 20px #282828;
+    }
+
+    .error:after{
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 10px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    .error:after{
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 10px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    .error:before{
+        content: "!";
+        display: inline-block;
+        background-color: rgb(250,168,50);
+        font-size: 16px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        color: white;
+        border-radius: 2px;
+        text-align: center;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        vertical-align: middle;
+    }
+
+    .error span{
+        display: inline-block;
+        vertical-align: top;
+        line-height: 18px;
+    }
+
+    .footTop span{
+        font-size:11px;
+        font-family: "微軟正黑體";
+        display: block;
+        height: 2px;
+    }
+    .trueTip{
+        color: #7fd02b;
+        display: block;
+        height: 2px;
+    }
+    .wrongTip{
+        color: red;
+        display: block;
+        height: 2px;
+    }
+
+}

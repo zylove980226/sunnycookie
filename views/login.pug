@@ -1,0 +1,51 @@
+doctype html
+
+head
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible",content="ie=edge")
+    link(rel="stylesheet",href="../stylesheets/login.css")
+    title 登录注册页面
+    script(type="text/javascript")
+        include ../public/javascripts/jquery.min.js
+    script(type="text/javascript")
+        include ../public/javascripts/login.js
+
+body
+    div(class="main")
+        h1 Welcome to my login page!
+        div(class="wrapper")
+            input(type="hidden",id="isRegister",value=isRegister)
+            div(class="formBox")
+                div(class="formTab")
+                    ul(class="loginList")
+                        li(class="loginItem")
+                            span(id="login") Login
+                            span(id="signUp") /&nbsp;Sign&nbsp;up
+                    div(class="clear")
+                    div(class="footWrapper")
+                        div(class="footTop")
+                            form(class="loginForm",method="post",action="/login",id="loginForm",autocomplete="off")
+                                p User&nbsp;Name
+                                input(type="text",name="userName",id="username",required)
+                                p Password
+                                input(type="password",name="passWord",id="password",required)
+                                input(type="submit",value="LOGIN")
+                            form(class="loginForm",method="post",style="display: none",action="/register",id="registerForm",autocomplete="off")
+                                p User&nbsp;Name
+                                input(type="text",name="name",required,id="account")
+                                span
+                                p Your&nbsp;Email
+                                input(type="email",name="email",required,id="emailId")
+                                span
+                                p Password
+                                input(type="password",name="userpassword",required,id="passwordId")
+                                span
+                                p Confirm Password
+                                input(type="password",name="password",id="passwordId2")
+                                span
+                                input(type="submit",value="SIGN UP")
+                        div(class="footBottom")
+                            p
+                                a Forgot password?
+

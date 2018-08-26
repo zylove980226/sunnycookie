@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../stylesheets/person.css">
+  <title>个人中心</title>
+</head>
+<body>
+  <div id="app"><em style="width: 150px;display: block;position: absolute;">
+      <input type="file" style="opacity:0; filter:alpha(opacity=0); height: 150px; width: 150px; position: absolute; top: 0; left: 0; z-index: 9;" onchange="handleFiles(this,'icon')"><img src="http://p4mxf46uj.bkt.clouddn.com/protrait/default_protrait.png" style="height: 150px; width: 150px;" id="icon"></em><a class="button" href="#">更换头像</a></div>
+  <div class="bottomBox">
+    <ul class="bottomList">
+      <li class="bottomItem"><a class="bottomA" href="#">
+          <div class="bottomLeft"><img class="icon1" src="../images/my1.png"></div>
+          <h3>我的资料</h3></a></li>
+      <li class="bottomItem"><a class="bottomA" href="#">
+          <div class="bottomLeft"><img class="icon2" src="../images/my2.png"></div>
+          <h3>我的收藏</h3></a></li>
+      <li class="bottomItem"><a class="bottomA" href="#">
+          <div class="bottomLeft"><img class="icon3" src="../images/my3.png"></div>
+          <h3>联系我们</h3></a></li>
+      <li class="bottomItem"><a class="bottomA" href="#">
+          <div class="bottomLeft"><img class="icon4" src="../images/my4.png"></div>
+          <h3>关于网站</h3></a></li>
+    </ul>
+  </div>
+</body>
+<script>function handleFiles(obj,id) {
+    file = document.getElementById("icon");
+    var files = obj.files;
+    img = new Image();
+    if(window.URL){
+        //File API
+        img.src = window.URL.createObjectURL(files[0]); //创建一个object URL，并不是你的本地路径
+        img.onload = function(e) {
+            window.URL.revokeObjectURL(this.src); //图片加载后，释放object URL
+        }
+    }
+    file.src=img.src;
+    //上传文件
+    var fd = new FormData(),//实例化一个表单
+        xhr = new XMLHttpRequest();
+    fd.append('headimg', files[0]);//追加图片元素
+    xhr.open('post', 'user.php?act=act_edit_img');//请求方式，请求地址
+    xhr.send(fd);
+}
+</script>

@@ -1,0 +1,107 @@
+doctype html
+
+head
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible",content="ie=edge")
+    link(rel="stylesheet",href="../stylesheets/detail.css",media="(max-width:1023px)")
+    link(rel="stylesheet",href="../stylesheets/detail1.css",media="(min-width:1024px)")
+    script(type="text/javascript")
+        include ../public/javascripts/jquery.min.js
+    script(type="text/javascript")
+        include ../public/javascripts/pinchzoom.js
+    script(type="text/javascript")
+        include ../public/javascripts/detail.js
+    script(type="text/javascript")
+        include ../public/javascripts/texiao.js
+    title detail
+body
+
+        nav
+            a(class=["left", "fa", "fa-align-justify", "fa-2x"])
+            a(class="logo")
+                img(src="../images/icon.png")
+            ul(class="nav_list")
+                li(class="nav_item")
+                    a Discovery
+                li(class="nav_item")
+                    a About
+                li(class="nav_item")
+                    a Listening
+            div(class="middle") TULIP
+            a(class=["right", "fa", "fa-heart", "fa-2x"])
+            div(class="nav_right")
+                a(class="right_login") 登录
+                a(class="right_sign") 注册
+        div(class="header_wrapper")
+            header
+                div(class="header_top")
+                    span(class="header_box")
+                        div(class="header_left")
+                        div(class="header_right")
+                            a(class="author") Annie Spratt
+                            a(class="belong") @anniespratt
+                div(class="header_bottom")
+                    div(class="btn1")
+                        a(class="like") Like It
+                    div(class="btn2")
+                        a(class="download")
+                            span(class="icon")
+                            span(style="color: #fff",class="downloadLink") Download
+        each arr in detailArray
+            div(class=["main", "page"],style="display: block")
+                div(class=["img_link", "pinch-zoom"])
+                    img(src=arr.picture,width="375")
+                p(class="description") #{arr.discription}
+
+        footer
+            div(class="other1")
+                div(class="other1_topWrapper")
+                    div(class="other1_top")
+                        div(class="pic_left")
+                            img(src="../images/8.jpg",width="245")
+                        div(class="pic_right")
+                            div(class="pic1")
+                                img(src="../images/6.jpg",width="105")
+                            div(class="pic2")
+                                img(src="../images/7.jpg",width="105")
+                div(class="other1_dsc")
+                    p
+                        strong Cities
+                    p(class="au") 3 Photos · Curated by
+                        span(style="color:#999")  Zoe Zheng
+                div(class="tag")
+                    div(class="tag1")
+                        a Italy
+                    div(class="tag1")
+                        a Building
+                    div(class="tag1")
+                        a City
+            div(class="other1")
+                div(class="other1_topWrapper")
+                    div(class="other1_top")
+                        div(class="pic_left")
+                            img(src="../images/10.jpg",width="245")
+                        div(class="pic_right")
+                            div(class="pic1")
+                                img(src="../images/14.jpg",width="105")
+                            div(class="pic2")
+                                img(src="../images/12.jpg",width="105")
+                div(class="other1_dsc")
+                    p
+                        strong Cities
+                    p(class="au") 3 Photos · Curated by
+                        span(style="color:#999")  Whistper
+                div(class="tag")
+                    div(class="tag1")
+                        a Italy
+                    div(class="tag1")
+                        a Building
+                    div(class="tag1")
+                        a City
+        div(class="rel")
+            p Related tags
+            div(class="rel_tags")
+                each arr in tagArr
+                    div(class="tag_a")
+                        a #{arr.type}

@@ -1,0 +1,53 @@
+doctype html
+
+head
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible",content="ie=edge")
+    link(rel="stylesheet",href="../fonts/font-awesome.css")
+    link(rel="stylesheet",href="../stylesheets/list.css",media="(max-width:768px)")
+    link(rel="stylesheet",href="../stylesheets/list1.css",media="(min-width:769px)")
+    script(type="text/javascript")
+        include ../public/javascripts/jquery.min.js
+    script(type="text/javascript")
+        include ../public/javascripts/list.js
+    script(type="text/javascript")
+        include ../public/javascripts/texiao.js
+    title List
+body
+    nav
+        a(class=["left","fa","fa-align-justify","fa-2x"])
+        a(class="logo")
+            img(src="../images/icon.png")
+        ul(class="nav_list")
+            li(class="nav_item")
+                a Discovery
+            li(class="nav_item")
+                a About
+            li(class="nav_item")
+                a Listening
+        div(class="middle") TULIP
+        a(class=["right","fa","fa-heart","fa-2x"])
+        div(class="nav_right")
+            a(class="right_login") 登录
+            a(class="right_sign") 注册
+    div(class="copy")
+        img(src="../images/icon.png",width="120")
+    div(class="list")
+        ul(class="list_wrapper")
+            each arr in picturetype
+                li(class="list_item")
+                    div(class="img")
+                        img(src=arr.picture)
+                    div(class="floatbox")
+                        h2 #{arr.name}
+                        p #{arr.discription}
+                    h3(class="smallh3") #{arr.name}
+                    p(class="smallp") #{arr.discription}
+                    div(class="small_icon")
+                        span(class="left")
+                            a(class=["fa","fa-paperclip","fa-1x"])
+                            span Link
+                        span(class="right")
+                        a(class="fa fa-heart fa-1x",style="color: palevioletred;")
+                        span Like

@@ -1,0 +1,76 @@
+nav.nav{
+    display: none;
+}
+div.slider{
+    display: none;
+}
+div.pic_wrapper{
+    display: none;
+}
+/*LOGO*/
+.top{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: transparent;
+    z-index: 999;
+}
+.top .topImg{
+    line-height: 150px;
+}
+.top .topImg img{
+    width: 176px;
+    height: 100px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.navList{
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #eeeeee;
+}
+.navList .myList{
+    width: 560px;
+    height: 40px;
+    margin: 0 auto;
+}
+.navList .myList .mylistItem{
+    float: left;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 70px;
+}
+.navList .myList .mylistItem a{
+    color: #fff;
+    font-size: 16px;
+    font-family: "微軟正黑體";
+    padding: 12px 0;
+}
+/*背景轮播*/
+.bgdiv {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+}
+
+.bgdiv img {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    position: absolute;
+}
+
+.pic_content,.pic_wrapper{
+    display: none;
+}
+div.nav1{
+    display: none;
+}
+input#nextPage{
+    display: none;
+}

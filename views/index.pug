@@ -1,0 +1,114 @@
+doctype html
+
+head
+  meta(charset="utf-8")
+  meta(name="viewport",content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible",content="ie=edge")
+  link(rel="stylesheet",href="../stylesheets/index.css")
+  link(rel="stylesheet",href="../fonts/font-awesome.css")
+  link(rel="stylesheet",href="../stylesheets/index1.css",media="(max-width:1023px)")
+  link(rel="stylesheet",href="../stylesheets/index2.css",media="(min-width:1024px)")
+  script(type="text/javascript")
+    include ../public/javascripts/jquery.min.js
+  script(type="text/javascript")
+    include ../public/javascripts/index.js
+  title 首页
+
+body
+  div.nav1
+    p
+      strong TULIP
+    div.login
+      span Hello,
+      a(href="/person") #{username}
+  div(class="main")
+    header(class="top")
+      div(class="topImg")
+        img(src="../images/icon.png")
+        //大于1024的导航
+      div(class="navList")
+          ul(class="myList")
+            li(class="mylistItem")
+                a   新鲜事
+            li(class="mylistItem")
+                a   趣闻
+            li(class="mylistItem")
+                a   阅读
+            li(class="mylistItem")
+                a   专题
+            li(class="mylistItem")
+                a   订阅
+            li(class="mylistItem")
+                a   专栏
+            li(class="mylistItem")
+                a   讨论
+            li(class="mylistItem")
+                a   更多
+    //小于768px分类导航
+    nav(class="nav")
+      ul(class="navList")
+        li(class="navItem")
+          a(href="#",class=['fa','fa-heart-o','fa-3x'])
+          span Novelty
+        li(class="navItem")
+          a(href="#",class=['fa','fa-flag-o','fa-3x'])
+          span Anecdote
+        li(class="navItem")
+          a(href="#",class=['fa','fa-smile-o','fa-3x'])
+          span Reading
+        li(class="navItem")
+          a(href="#",class=['fa','fa-moon-o','fa-3x'])
+          span Special
+        li(class="navItem")
+          a(href="#",class=['fa','fa-envelope-o','fa-3x'])
+          span Subscribe
+        li(class="navItem")
+          a(href="#",class=['fa','fa-star-o','fa-3x'])
+          span Column
+        li(class="navItem")
+          a(href="#",class=['fa','fa-tablet','fa-3x'])
+          span Communicate
+        li(class="navItem")
+          a(href="#",class=['fa','fa-hand-o-right','fa-3x'])
+          span More
+    div(class="pic_content")
+      div(class="content_inner")
+        h2(class="title")
+          strong
+            a(href="/list",style="color:#191919") SCENE
+      div(class="piclist_wrapper")
+        ul(class="pic_list")
+          each arr in scenetype
+            li(class="pic_item")
+              div(class="pic")
+                img(src=arr.picture)
+              div(class="pic_hd")
+                p #{arr.name}
+    div(class="pic_content")
+      div(class="content_inner")
+        h2(class="title")
+          strong
+            a(href="/list",style="color:#191919") LIFE
+      div(class="piclist_wrapper")
+        ul(class="pic_list")
+          each arr in lifetype
+            li(class="pic_item")
+              div(class="pic")
+                img(src=arr.picture)
+              div(class="pic_hd")
+                p #{arr.name}
+
+    //div(id="content")
+    div(id="unique")
+    //input(type="button" value="查看更多",id="nextPage")
+
+
+
+
+
+    //大于1027px的背景轮播
+    div(id="imgbox",class="bgdiv")
+      img(src="../images/2.jpg")
+      img(src="../images/13.jpg")
+
+

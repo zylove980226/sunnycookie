@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    height: 100%;
+    font-family: "微軟正黑體";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #111;
+}
+
+nav{
+    display: none;
+}
+/*头部*/
+.header_wrapper{
+    width: 100%;
+    height: 102px;
+    background-color: orange;
+}
+.header_wrapper header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 9px 12px;
+    background-color: #fff;
+}
+/*头部上面*/
+header .header_top{
+    display: flex;
+    min-width: 0;
+    flex-grow: 1;
+    padding: 4px;
+    flex-basis: 200px;
+}
+header .header_top span{
+    display: inline-flex;
+    position: relative;
+    pointer-events: auto;
+    align-items: center;
+    max-width: 100%;
+    background-color: transparent;
+}
+header .header_box .header_left{
+    position: relative;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: pink;
+}
+header .header_box .header_right{
+    position: relative;
+    left: 10px;
+}
+header .header_box .header_right .author{
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+header .header_box .header_right .belong{
+    display: block;
+    font-size: 11px;
+    color: #999;
+    text-decoration: none;
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*头部下面*/
+header .header_bottom{
+    display: flex;
+    flex-basis: 100%;
+}
+header .header_bottom .btn1,
+header .header_bottom .btn2{
+    display: flex;
+    padding: 4px;
+}
+header .header_bottom .btn1 .like,
+header .header_bottom .btn2 .download{
+    display: inline-block;
+    height: 32px;
+    padding: 0 11px;
+    font-size: 14px;
+    line-height: 29px;
+    color: #999;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #fff;
+    border-color: #ddd;
+}
+header .header_bottom .btn2 .download{
+    background-color: #3cb46e;
+}
+header .header_bottom .btn2 .download .icon{
+    display: inline-block;
+    position: relative;
+    top: 11px;
+    width: 1px;
+    height: 6px;
+    color: #fff;
+    border: 8px solid transparent;
+    border-top: 8px solid;
+    box-shadow: 0 -12px 0 -4px;
+    background: linear-gradient(to bottom,#ffffff 50%,#000000 50%) repeat-x;
+}
+/*中间图片部分*/
+.main{
+    width: 100%;
+}
+.main .description{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 11px;
+}
+/*下面其他图片*/
+footer{
+    width: 100%;
+}
+footer .other1{
+    margin: 12px;
+    margin-top: 70px;
+    flex-basis: 100%;
+    padding-bottom: 24px;
+}
+footer .other1 .other1_topWrapper{
+    position: relative;
+    height: 245px;
+}
+footer .other1 .other1_top{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 235px;
+    max-width: 750px;
+}
+footer .other1 .other1_top .pic_left{
+    float: left;
+    width: 245px;
+}
+footer .other1 .other1_top .pic_right{
+    float: right;
+    width: 30%;
+    height: 245px;
+}
+footer .other1 .other1_top .pic_right .pic1{
+    margin-top: 14px;
+}
+
+
+
+
+.other_top .pic_dsc{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.other_top .pic_dsc p{
+    font-weight: 600;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.34;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.other1_top:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.other1_dsc{
+    position: relative;
+}
+.other1_dsc p strong{
+    font-size: 21px;
+    font-weight: 600;
+}
+.other1_dsc .au{
+    color: #999;
+}
+
+.other1 .tag{
+    display: flex;
+    flex-wrap: wrap;
+}
+.other1 .tag .tag1{
+    padding-top: 8px;
+    padding-left: 8px;
+}
+.other1 .tag .tag1 a{
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 26px;
+    height: 26px;
+    color: #999;
+}
+
+
+.rel{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 calc(4px * 3);
+}
+.rel p{
+    font-size: 21px;
+    font-weight: 600;
+}
+.rel .rel_tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+.rel .rel_tags .tag_a{
+    padding-top: 8px;
+    padding-left: 8px;
+}
+.rel .rel_tags .tag_a a{
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 26px;
+    height: 26px;
+    color: #999;
+}
+/*图片放大缩小*/
+.pinch-zoom,.pinch-zoom img{
+    width: 100%;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
+}
+

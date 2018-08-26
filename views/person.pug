@@ -1,0 +1,41 @@
+doctype html
+
+head
+    meta(charset="utf-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible",content="ie=edge")
+    link(rel="stylesheet",href="../stylesheets/person.css")
+    script
+        include ../public/javascripts/texiao.js
+    title 个人中心
+body
+    div(id="app")
+        em(style="width: 150px;display: block;position: absolute;")
+            input(type="file",style="opacity:0; filter:alpha(opacity=0); height: 150px; width: 150px; position: absolute; top: 0; left: 0; z-index: 9;",onchange="handleFiles(this,'icon')")
+            img(src="http://p4mxf46uj.bkt.clouddn.com/protrait/default_protrait.png",style="height: 150px; width: 150px;",id="icon")
+        a(href="/personnew",class="button") Change Photo
+
+    div(class="bottomBox")
+        ul(class="bottomList")
+            li(class="bottomItem")
+                a(href="/person",class="bottomA")
+                    div(class="bottomLeft")
+                        img(src="../images/my1.png",class="icon1")
+                    h3 My Information
+            li(class="bottomItem")
+                a(href="#",class="bottomA")
+                    div(class="bottomLeft")
+                        img(src="../images/my2.png",class="icon2")
+                    h3 My Collection
+            li(class="bottomItem")
+                a(href="#",class="bottomA")
+                    div(class="bottomLeft")
+                        img(src="../images/my3.png",class="icon3")
+                    h3 Contact Us
+            li(class="bottomItem")
+                a(href="/index",class="bottomA")
+                    div(class="bottomLeft")
+                        img(src="../images/my4.png",class="icon4")
+                    h3 About Site
+script
+    include ../public/javascripts/person.js

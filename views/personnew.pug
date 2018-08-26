@@ -1,0 +1,36 @@
+doctype html
+
+head
+    meta(charset="utf-8")
+    meta(name="Author" ,content="40930845@qq.com")
+    meta(name="Keywords",content="")
+    meta(name="Description",content="")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible",content="ie=edge")
+    link(rel="stylesheet",href="../fonts/font-awesome.css")
+    link(rel="stylesheet",href="../stylesheets/personnew.css")
+    link(rel="stylesheet",href="../stylesheets/cropper.min.css")
+    script(type="text/javascript")
+        include ../public/javascripts/jquery.min.js
+    script(type="text/javascript")
+        include ../public/javascripts/cropper.min.js
+    script(type="text/javascript")
+        include ../public/javascripts/personnew.js
+
+    title List
+body
+    div(class="up")
+        div(class=["up-file","clear"])
+            button(type="button")
+                i(class=["fa","fa-cloud-upload"]) 选择要上传的文件
+            input(id="inputImage",type="file",accept="image/*")
+
+    div(class="clear")
+        div(class="up-before")
+            img(src="",id="image")
+        div(class="up-after")
+    center
+        div(class="up-footer")
+            i(class=["fa","fa-rotate-left"],onclick="rotateImg(-90)")
+            i(class=["fa","fa-rotate-right"],onclick="rotateImg(90)")
+            i(class=["fa","fa-check"],id="upImgBtn")

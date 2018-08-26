@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微軟正黑體";
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #f9f9f9;
+}
+/*顶部固定栏*/
+nav{
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 0;
+    background: #191919;
+    float: left;
+    height: 60px;
+    width: 100%;
+    z-index: 5;
+}
+nav .middle{
+    float: left;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 21px;
+    margin-left: 130px;
+}
+nav .left{
+    float: left;
+    line-height: 60px;
+    color: #fff;
+}
+nav .right{
+    float: right;
+    line-height: 60px;
+    color: #fff;
+}
+/*图标*/
+.copy{
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 1;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.copy img{
+    margin-top: 15px;
+}
+/*上面列表*/
+.list{
+    background-color: #f9f9f9;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 160px;
+}
+.list .list_wrapper{
+    list-style: none;
+}
+.list .list_wrapper .list_item{
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 170px;
+    height: 280px;
+    background-color: #fff;
+}
+.list .list_wrapper .list_item .img img{
+    width: 170px;
+}
+.list .list_wrapper .list_item .smallh3{
+    margin-top: 5px;
+}
+.list .list_wrapper .list_item .smallp{
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.list_item .small_icon{
+    margin-top: 40px;
+    text-align: center;
+}
+nav a.logo{
+    display: none;
+}
+nav .nav_list{
+    display: none;
+}
+nav .nav_right,
+.list_item .floatbox{
+    display: none;
+}
+
